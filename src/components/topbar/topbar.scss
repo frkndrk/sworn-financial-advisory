@@ -1,0 +1,108 @@
+.topbar{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    color: rgb(28, 65, 119);
+    
+    @media (max-width: 830px) {
+        height: 40px;
+    }
+    
+    .contTB{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        .addresBar{ 
+            flex: 1;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            z-index: 20;
+
+            @media (max-width: 830px) {
+                display: none;
+            }
+
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 13px;
+                    color: black;
+                    min-width: 200px;
+
+                    &:nth-child(1) {
+                        margin-right: 50px;
+                    }
+
+                    @media (max-width: 1064px) {
+                    &:nth-child(2) {
+                        margin-left: -50px;
+                    }
+                }
+                }
+
+                
+            }
+        }
+
+        .phoneNum{
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: rotate(0deg);
+                margin-right: 5px;
+            }
+
+            @media (max-width: 830px) {
+                display: flex;
+            }
+        }
+
+        .icons{
+            display: flex;
+            flex: 1;
+            justify-content: end;
+            align-items: center;
+            z-index: 20;
+
+            ul{
+                display: flex;
+
+                li{
+                    display: flex;
+                    margin: 0 15px;
+                    cursor: pointer;
+
+                    &:nth-child(3){
+                        margin-right: 0;
+                    }
+                }
+                
+            }
+        }
+
+
+        @media (max-width: 650px) {
+            justify-content: center;
+        }
+    }
+
+    
+}

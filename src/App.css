@@ -1,0 +1,108 @@
+.app{
+    font-family: "Afacad", sans-serif;
+    width: 100vw;
+    background-color: #fff;
+
+    .contact-icons {
+        position: fixed;
+        bottom: 80px;
+        right: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+
+        @media (max-width: 950px) {
+            bottom: 50px;
+        }
+
+        * {
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            color: #fff;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: 950px) {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        
+
+        .whatsapp {
+            background: #4dc247;
+            border-radius: 50%;/* 
+            animation: shadow 1s ease infinite; */
+
+
+            &:hover {
+                transition: all .5s ease;
+                transform: rotate(30deg);
+            }
+
+            @keyframes shadow {
+
+                0%,
+                100% {
+                    box-shadow: 0 0px 20px #4dc247;
+                }
+
+                50% {
+                    box-shadow: 0 0px 40px #4dc247;
+                }
+            }
+        }
+
+        .shadow{
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: rgba(54, 179, 5, 0.3);
+            border-radius: 50%;
+            z-index: -1;
+            animation: shadow 2s ease infinite;
+
+            @keyframes shadow {
+
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: scale(1.5);
+                    opacity: 0;
+                }
+            }
+        }
+
+        .shadow2{
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: rgba(54, 179, 5, 0.9);
+            border-radius: 50%;
+            z-index: -11;
+            animation: shadow 1.5s ease infinite;
+
+            @keyframes shadow {
+
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: scale(1.8);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+

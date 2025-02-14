@@ -1,0 +1,119 @@
+.dos{
+    width: 100%;
+    height: 100%;
+
+    h1{
+        width: 100%;
+        margin: 30px 0;
+
+        @media (max-width: 770px) {
+            font-size: 25px;
+            margin: 15px 0;
+        }
+    }
+
+    p{
+        font-size: 18px;
+        margin-bottom: 15px;
+        line-height: 35px;
+
+        @media (max-width: 770px) {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        margin-left: 10px;
+
+        li{
+            text-decoration: none;
+            list-style-type:circle;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #504f4f;
+        }
+    }
+
+    ol{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        margin-left: 15px;
+
+        li{
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #504f4f;
+        }
+    }
+
+    .arrow{
+        animation: down 2s infinite;
+        cursor: pointer;
+
+        @keyframes down {
+            0%{
+                transform: translateY(0px) rotate(-90deg);
+            }
+            50%{
+                transform: translateY(10px) rotate(-90deg);
+            }
+            100%{
+                transform: translateY(0px) rotate(-90deg);
+            }
+            
+        }
+    }
+
+    .outCont{
+        height: 0;
+        transition: all .5s ease;
+        
+        &.active{
+            animation: downUp .5s linear;
+            height: 100%;
+            margin-bottom: 30px;
+
+            @keyframes downUp {
+                0%{
+                    height: 0;
+                    opacity: 0;
+                }
+                100%{
+                    height: 100%;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .hiddenCont{
+            background-color: #dedede;
+            box-shadow: 0 0 10px 1px #aaa;
+            padding: 20px;
+            height: 100%;
+
+            h2{
+                margin-bottom: 10px;
+            }
+    }
+    }
+    h3{
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+}
